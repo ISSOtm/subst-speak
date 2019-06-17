@@ -1,0 +1,6 @@
+Est-ce que tu vas bien ?
+Ceci est un message de test ma gueule
+Et celui-ci en est encore un autre
+Parce que j'ai besoin de quelque chose qui ait du repondant voyez-vous
+Surtout de beaucoup de caracteres, parce que sinon l'analyse frequentielle ne marche pas
+Et sachant que c'est le moteur principal de cette activite, ca serait tres tres bete
