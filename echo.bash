@@ -20,12 +20,21 @@ decode() {
 
 
 end_conversation() {
-    echo "SIGINT recieved, stopping." >&2
+    echo SIGINT recieved, stopping. >&2
     echo \<$SENDER_NICK\> Au revoir ! | encode
     true {CONV_FD}<&- # Close conversation file's descriptor
     exit 0
 }
 trap end_conversation INT
+
+resume_conversation() {
+    echo Resuming conversation... >&2
+    echo \<$SENDER_NICK\> Oh, pardon, j\'etais occupe | encode
+}
+trap resume_conversation ALRM
+
+
+echo If the conversation hangs, resume it using \`kill -s SIGALRM $$\` >&2
 
 
 # Begin conversation to trigger other end if it's connected
